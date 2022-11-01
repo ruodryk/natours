@@ -1,0 +1,41 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  /* font-size: 62.5%;    10px*/
+
+  font-size: 62.5%; //      8px
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+
+  //the media queries order is the larger to the smaller
+
+  //menor que 1200px
+  @include respond(tab-land) {
+    font-size: 56.25%; //1rem = 9px
+  }
+
+  //menor que 900px
+  @include respond(tab-port) {
+    font-size: 50%; //1rem = 8px
+  }
+
+  //maior que 1800px
+  @include respond(big-desktop) {
+    font-size: 75%; //1rem = 12px
+  }
+}
+
+body {
+  box-sizing: border-box;
+  padding: 3rem;
+
+  @include respond(tab-port) {
+    padding: 0;
+  }
+}

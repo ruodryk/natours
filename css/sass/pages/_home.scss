@@ -1,0 +1,141 @@
+.section-about {
+  background-color: $color-light-grey;
+  padding: 25rem 5rem;
+  margin-top: -25vh;
+
+  @include respond(tab-land) {
+    padding: 30rem 5rem 20rem;
+  }
+
+  @include respond(phone) {
+    padding: 30rem 5rem 50rem;
+  }
+
+  &__container {
+    max-width: 140rem;
+    margin: 0 auto;
+    display: flex;
+    gap: 8rem;
+
+    @include respond(phone) {
+      flex-direction: column-reverse;
+    }
+  }
+
+  &__text-box {
+    width: 45%;
+    display: flex;
+    flex-direction: column;
+    gap: 3.5rem;
+    justify-content: center;
+    align-items: center;
+    align-self: center;
+
+    @include respond(phone) {
+      width: 70%;
+      gap: 1rem;
+      text-align: center;
+      transform: translateY(25rem);
+    }
+  }
+
+  &__img-box {
+    position: relative;
+    flex: 1;
+  }
+
+  &__img {
+    position: absolute;
+    box-shadow: 0 1.5rem 4rem rgba($color-black, 0.2);
+    width: 50%;
+    transition: all 0.2s;
+    z-index: 10;
+    outline-offset: 2rem;
+
+    @include respond(phone) {
+      outline-offset: 1rem;
+    }
+
+    &:hover {
+      outline: 2rem solid $color-primary;
+      transform: scale(1.1);
+      z-index: 20;
+
+      @include respond(phone) {
+        outline: 1rem solid $color-primary;
+      }
+    }
+
+    &1 {
+      left: 0;
+      top: -2rem;
+    }
+
+    &2 {
+      right: 0;
+      top: 2rem;
+    }
+
+    &3 {
+      left: 20%;
+      top: 10rem;
+    }
+  }
+}
+
+.section-tours {
+  padding: 30rem 5rem 15rem;
+  background-color: $color-light-grey;
+  text-align: center;
+  margin-top: -12rem;
+}
+
+.section-stories {
+  background-size: cover;
+  padding: 16rem 5rem;
+  position: relative;
+}
+
+.section-book {
+  padding: 15rem 5rem;
+  background-image: linear-gradient(
+    to right bottom,
+    $color-primary-light,
+    $color-primary-dark
+  );
+}
+
+.book {
+  max-width: 110rem;
+  margin: 0 auto;
+  background-image: linear-gradient(
+      105deg,
+      rgba($color-white, 0.8) 0%,
+      rgba($color-white, 0.8) 50%,
+      transparent 50%
+    ),
+    url(../img/nat-10.jpg);
+  background-size: cover;
+  /* height: 50rem; */
+  border-radius: 0.6rem;
+  box-shadow: 0 1.5rem 4rem rgba($color-black, 0.4);
+
+  @include respond(tab-port) {
+    background-image: linear-gradient(
+        105deg,
+        rgba($color-white, 0.8) 0%,
+        rgba($color-white, 0.8) 100%
+      ),
+      url(/img/nat-10.jpg);
+  }
+
+  &__form {
+    width: 50%;
+    padding: 6rem;
+
+    @include respond(tab-port) {
+      width: 100%;
+      text-align: center;
+    }
+  }
+}
